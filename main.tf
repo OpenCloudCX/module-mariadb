@@ -6,7 +6,7 @@ terraform {
 }
 
 resource "aws_secretsmanager_secret" "mariadb_root" {
-  name                    = "mariadb_root"
+  name                    = "mariadb_root-${var.stack}"
   recovery_window_in_days = 0
 }
 
