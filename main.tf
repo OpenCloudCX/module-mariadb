@@ -24,7 +24,7 @@ resource "aws_secretsmanager_secret_version" "mariadb_root" {
 resource "kubernetes_secret" "mariadb_root" {
   metadata {
     name      = "mariadb-root-password"
-    namespace = "develop"
+    namespace = var.namespace
     labels = {
       "ConnectOutput" = "true"
     }
