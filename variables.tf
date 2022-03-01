@@ -28,3 +28,8 @@ variable "helm_timeout" {
   type        = number
   default     = 600
 }
+
+variable "prefix" {
+  description = "Prefix for services"
+  type        = string
+}
